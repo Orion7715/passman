@@ -154,8 +154,6 @@ Install all dependencies with:
 composer install
 ```
 
-Do **not** commit the generated `vendor/` directory. The repository should contain `composer.json` and `composer.lock`, allowing dependencies to be recreated with `composer install`.
-
 ---
 
 # Installation
@@ -166,11 +164,9 @@ Example:
 
 ```bash
 cd /var/www/html
-git clone https://github.com/YOUR_USERNAME/passman.git
+git clone https://github.com/Orion7715/passman.git
 cd passman
 ```
-
-Replace `YOUR_USERNAME` with the GitHub account or organization that owns the repository.
 
 ---
 
@@ -254,8 +250,6 @@ DB_PASS=REPLACE_WITH_YOUR_REAL_DATABASE_PASSWORD
 ```
 
 ### Important
-
-`.env` contains secrets and must **never** be committed to GitHub.
 
 The repository contains `.env.example` only so that a new installation knows which variables are required.
 
@@ -928,9 +922,7 @@ Private vault/user-generated data should not be committed.
 
 # License
 
-No license is assumed by this README.
-
-If you want to publish Passman as open-source software, add an explicit `LICENSE` file and update this section accordingly.
+No license is assumed 
 
 ---
 

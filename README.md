@@ -4,8 +4,6 @@ Passman is a self-hosted PHP password and private-data vault designed to keep se
 
 It provides a web interface for managing credentials, TOTP secrets, secure notes, and private files, with authentication, CSRF protection, user-level authorization, session handling, database-backed storage, and encryption for sensitive vault data.
 
-> **Security notice:** Passman is security-sensitive software. Before using it with real secrets, test the installation, keep a current database/files backup, use HTTPS, protect the `.env` file, and review the application's configuration for your deployment.
-
 ---
 
 ## Features

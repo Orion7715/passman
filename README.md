@@ -269,64 +269,9 @@ Expected result:
 Passman schema is ready. setup.php is CLI-only and web access is blocked.
 ```
 
-The setup process creates or migrates the current schema.
-
-The migration includes the current fields required by the application, including:
-
-### `users`
-
-- `id`
-- `username`
-- `master_password`
-- `key_salt`
-- `created_at`
-
-### `passwords`
-
-- `id`
-- `user_id`
-- `category`
-- `domain`
-- `username`
-- `password`
-- `email`
-- `note`
-- `otp_secret`
-
-It also creates/maintains the user relationship and required index.
-
-The migration is designed to be repeatable.
-
 ---
 
-# 6. Verify the database schema
-
-You can verify the result with:
-
-```bash
-mysql -u passman_user -p mypassman
-```
-
-Then:
-
-```sql
-DESCRIBE users;
-DESCRIBE passwords;
-```
-
-The `users` table should contain `key_salt`.
-
-The `passwords` table should contain `otp_secret`.
-
-Exit:
-
-```sql
-EXIT;
-```
-
----
-
-# 7. Apache configuration
+# 6. Apache configuration
 
 Passman uses `.htaccess`, so Apache must allow directory-level overrides.
 
@@ -366,7 +311,7 @@ sudo systemctl status apache2
 
 ---
 
-# 8. HTTPS
+# 7. HTTPS
 
 For a production deployment, use HTTPS.
 
@@ -376,7 +321,7 @@ For a local development installation, `https://localhost/...` may use a locally 
 
 ---
 
-# 9. File permissions
+# 8. File permissions
 
 Use the minimum permissions required for the application.
 

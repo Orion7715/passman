@@ -1,0 +1,26 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Composer dependencies
+/vendor/
+
+# Private runtime vault data
+/vault/
+
+# Logs, temporary files, and backups
+*.log
+*.tmp
+*.bak
+*.backup
+*.sql
+*.sql.gz
+*.swp
+*~
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

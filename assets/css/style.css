@@ -1,0 +1,49 @@
+.strength-bar {
+    transition: width 0.6s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.strength-bar {
+    transition:
+        width 0.8s ease-in-out,
+        background-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #0f0f0f inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+.cat-Work { background-color: rgba(99, 102, 241, 0.2) !important; color: #a5b4fc !important; border-color: rgba(99, 102, 241, 0.4) !important; }
+.cat-Social { background-color: rgba(14, 165, 233, 0.2) !important; color: #7dd3fc !important; border-color: rgba(14, 165, 233, 0.4) !important; }
+.cat-Finance { background-color: rgba(245, 158, 11, 0.2) !important; color: #fcd34d !important; border-color: rgba(245, 158, 11, 0.4) !important; }
+.cat-Personal { background-color: rgba(244, 63, 94, 0.2) !important; color: #fda4af !important; border-color: rgba(244, 63, 94, 0.4) !important; }
+.cat-Shopping { background-color: rgba(249, 115, 22, 0.2) !important; color: #fdba74 !important; border-color: rgba(249, 115, 22, 0.4) !important; }
+.cat-General { background-color: rgba(148, 163, 184, 0.2) !important; color: #e2e8f0 !important; border-color: rgba(148, 163, 184, 0.4) !important; }
+.cat-Education { background-color: rgba(16, 185, 129, 0.2) !important; color: #6ee7b7 !important; border-color: rgba(16, 185, 129, 0.4) !important; }
+
+
+        .category-tag {
+            font-size: 9px !important;
+            padding: 2px 6px !important;
+            letter-spacing: 0.05em;
+            border-radius: 6px;
+            border-width: 1px;
+        }
+        :root { --background: #0f0f0f; --card-dark: #1a1a1a; }
+        body { background-color: var(--background); color: white; scroll-behavior: smooth; }
+        .category-pill { transition: all 0.3s ease; cursor: pointer; }
+        .category-pill.active { background-color: #2563eb; color: white; border-color: #2563eb; }
+
+        .strength-bar { 
+            height: 6px; 
+            border-radius: 4px; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            width: 0%; 
+            margin-top: 8px; 
+            background-color: rgba(31, 41, 55, 1);
+
+

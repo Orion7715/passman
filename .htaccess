@@ -1,0 +1,24 @@
+Options -Indexes
+DirectoryIndex login.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Runtime data, dependencies, and the installation script are never web routes.
+    RewriteRule ^(?:vault(?:/|$)|vendor(?:/|$)|setup\.php$) - [F,L,NC]
+    RewriteRule ^includes/(?!captcha\.php$) - [F,L,NC]
+
+    # Do not expose dotfiles, backups, logs, dumps, or editor leftovers.
+    RewriteRule (^|/)\.(?!well-known(?:/|$)) - [F,L,NC]
+    RewriteRule \.(?:bak|backup|dist|ini|log|old|orig|save|sql|sql\.gz|swp|tmp)$ - [F,L,NC]
+</IfModule>
+
+<FilesMatch "^(?:\.env|\.htaccess|composer\.(?:json|lock))$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "no-referrer"
+</IfModule>
